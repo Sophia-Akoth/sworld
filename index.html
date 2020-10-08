@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <style>
-  .button{
+  /*.button{
   display: inline-block;
   padding: 10px 20px;
   text-align: center;
@@ -42,10 +42,94 @@ h1{
 	margin-left: 100px;
 	text-align: center;
 	color: white;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Francois+One|Play');
+
+html, body, section {
+    height: 100%;
+}
+body {
+    color: #fff;
+    text-align: center;
+}
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sop-container {
+    display: flex;
+}
+div {
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+.sop-left {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url("images/fila.jpg");
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+  text-transform: uppercase;
+  filter: grayscale(80%);
+}
+ 
+.sop-right {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url("images/vans15.jpg");
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+  text-transform: uppercase;
+  filter: hue-rotate(90deg);
+}
+a:hover {
+ text-decoration: none;
+}
+
+.sop-left:hover, .sop-right:hover {
+    transform: scale(0.95);
+  filter: hue-rotate(-90deg);
+}
+.sop-container h1 {
+    letter-spacing: 2px;
+  font-family: 'Francois One', sans-serif;
+    font-size: 3rem;
+}
+.sop-button {
+    border-radius: 2px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 6px;
+    margin: 0 1%;
+    text-align: center;
+  font-family: 'Play', sans-serif;
+    text-decoration: none;
+  letter-spacing: 1px;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 150px;
+}
+ 
+.sop-button:hover {
+    background: #fff;
+    color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .sop-container {
+    flex-direction: column;
+  }
+
 }
   </style>
   </head>
-<body style="background-image: linear-gradient(#2D557D,#9610FD);" >
+<body >
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
@@ -67,13 +151,26 @@ h1{
     </li>
   </ul>
 </nav>
-<h1>WELCOME TO SHOE WORLD</h1>
-<a class="button button1" href="products.html">VIEW OUR PRODUCTS</a>
+<!-- <h1>WELCOME TO SHOE WORLD</h1> -->
+<!-- <a class="button button1" href="products.html">VIEW OUR PRODUCTS</a> -->
  
 
 <!-- <h4>Welcome to Shoe world where we sell all types of shoes at discounted prices and great offers</h4> -->
-<div class="fixed-footer">
+<!-- <div class="fixed-footer">
         <div class="container">Copyright &copy; 2020 Your Company</div>        
+    </div> -->
+    <section class="sop-container">
+    <div class="sop-left">
+        <article>
+            <h1>FILA</h1><a class="sop-button" href="products.html">Power steps</a>
+        </article>
     </div>
+    <div class="sop-right">
+        <article>
+            <h1>VANS</h1><a class="sop-button" href="products.html">Walk the talk</a>
+        </article>
+    </div>
+</section>
+
 </body>
 </html>
